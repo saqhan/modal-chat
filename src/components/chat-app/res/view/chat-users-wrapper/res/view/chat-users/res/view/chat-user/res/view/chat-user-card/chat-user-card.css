@@ -7,7 +7,6 @@
   cursor: pointer;
   padding: 5px 0px;
   display: flex;
-  margin-right: 10px;
 }
 
 .left {
@@ -23,6 +22,11 @@
   border-bottom: 1px solid #ececec;
   padding-bottom: 5px;
 }
+
+.mess-wrapper {
+  display: flex;
+}
+
 
 .positon-user {
   font-size: 10px;
@@ -70,20 +74,27 @@
   color: #8e8e8e;
   font-size: 13px;
   white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
 }
 
-.user-mess::after {
+.new-mess-wrap::after {
   content: "            ";
   position: relative;
-  right: 24%;
+  left: -50px;
   z-index: 0;
   background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 100%,#fff 0);
 
 }
 
+.new-mess-wrap {
+  text-align: right;
+  width: 15px;
+}
+
 .new-mess {
   position: relative;
-  right: 15%;
+  right: 10%;
   margin-top: 3px;
   font-size: 11px;
   z-index: 99;

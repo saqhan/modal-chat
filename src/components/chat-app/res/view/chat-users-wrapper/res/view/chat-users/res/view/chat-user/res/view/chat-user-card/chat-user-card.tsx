@@ -16,16 +16,16 @@ export class ChatUserCard implements ComponentInterface {
           <div class="left">
             <div
               class="img-user"
-              style={{ backgroundImage: `url( ${this.user.img} )` }}
-            ></div>
+              style={{ backgroundImage: "url(" + this.user.img + ")" }}></div>
           </div>
           <div class="right">
             <div class="user-data">
               <div class="user-name">{this.user.name}</div>
               <div class="message-date">{this.user.date}</div>
             </div>
-            <div class="user-mess">{this.user.message}
-              <span class="new-mess">2</span>
+            <div class="mess-wrapper">
+              <div class="user-mess">{this.user.message}</div>
+              <div class="new-mess-wrap" ><span class="new-mess">1</span></div>
             </div>
             <span class="positon-user">{this.user.position}</span>
           </div>

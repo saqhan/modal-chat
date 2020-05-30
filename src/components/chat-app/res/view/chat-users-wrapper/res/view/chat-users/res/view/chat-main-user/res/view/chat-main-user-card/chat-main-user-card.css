@@ -5,9 +5,9 @@
 
 .user-wrapper-main {
   padding: 0px 10px;
-  padding-top: 5px;
   display: flex;
-  margin-right: 10px;
+  margin-right: 0px;
+  padding-right: 15px;
 }
 
 .left {
@@ -60,18 +60,24 @@
   white-space: nowrap;
 }
 
-.user-mess::after {
-  content: "        ";
-  width: 24%;
+
+.new-mess-wrap::after {
+  content: "            ";
   position: relative;
-  right: 19%;
+  left: -50px;
   z-index: 0;
-  background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 75%,#fff 0);
+  background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 100%,#fff 0);
+
+}
+
+.new-mess-wrap {
+  text-align: right;
+  width: 15px;
 }
 
 .new-mess {
   position: relative;
-  right: 15%;
+  right: 10%;
   margin-top: 3px;
   font-size: 11px;
   z-index: 99;
@@ -103,12 +109,16 @@
   .user-wrapper {
     width: 365px;
   }
+  .user-wrapper-main {
+    padding-right: 0px;
+    padding: 0px 0px;
+  }
 }
 
 @media (max-width: 320px) {
 
   .user-wrapper {
-    width: 320px;
+    width: 100%;
   }
   .message-date {
     font-size: 11px;

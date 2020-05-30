@@ -8,13 +8,13 @@ import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 export class ChatMainUser implements ComponentInterface {
   @Prop() mainUser: any;
 
-  getUserMain(arr): any[] {
-    return arr.map((item) => item.main);
-  }
+  // getUserMain(arr): any[] {
+  //   return arr.map((item) => item.main);
+  // }
   render() {
     return (
       <div class="main-wrapper">
-        <MainUserMessage   main={this.getUserMain(this.mainUser)}></MainUserMessage>
+        <MainUserMessage   main={this.mainUser}></MainUserMessage>
       </div>
     );
   }

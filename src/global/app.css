@@ -98,27 +98,4 @@ a:hover {
 }
 
 
-@media (max-width: 375px) {
-  .wrapper {
-    width: 100%;
-  }
-  .wrapper-chat {
-    width: auto;
-    padding-right: 10px;
-  }
-  .user {
-    padding: 0px;
-  }
-}
-@media (max-width: 320px) {
-  .user-text {
-    width: 85%;
-  }
-  .user-info {
-    justify-content: flex-start;
-  }
-  .user-info .name {
-    max-width: 150px;
-  }
-}
 

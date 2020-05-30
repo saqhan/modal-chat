@@ -33,3 +33,14 @@
 .header-chat a i:hover {
   color: #72b94d;
 }
+
+@media (max-width: 414px) {
+
+  .wrapper-chat {
+    width: 414px;
+    height: 100vh;
+  }
+
+
+
+}

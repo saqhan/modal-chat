@@ -13,16 +13,16 @@ export class ChatMainUserCard implements ComponentInterface {
     return (
       <div class="user-wrapper-main">
         <div class="left">
-          <div  class="img-user" style={{ backgroundImage: `url( ${this.main.img} )` }}></div>
+          <div  class="img-user" style={{ backgroundImage: "url(" + this.main.img + ")" }}></div>
         </div>
         <div class="right-main">
           <div class="user-data">
             <div class="user-name">{this.main.name}</div>
             <div class="message-date"> {this.main.date} </div>
           </div>
-          <div class="user-mess">
-            {this.main.message}
-            <span class="new-mess">2</span>
+          <div class="mess-wrapper">
+            <div class="user-mess">{this.main.message}</div>
+            <div class="new-mess-wrap" ><span class="new-mess">2</span></div>
           </div>
         </div>
       </div>
