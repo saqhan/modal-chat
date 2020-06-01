@@ -2,7 +2,6 @@ import {
   Component,
   ComponentInterface,
   h,
-  State,
   Event,
   EventEmitter,
   Prop,
@@ -15,22 +14,31 @@ import { mainUser, messages } from "../../../../../utils/mock";
   shadow: false,
 })
 export class ChatWrapper implements ComponentInterface {
-  @State() showContent = "users";
+
   @Event() close: EventEmitter;
+  @Event() selectPersonal: EventEmitter;
+  @Event() selectUsers: EventEmitter;
+  @Event() selectFiles: EventEmitter;
   @Prop() messages: any;
   @Prop() mainUser: any;
+  @Prop() showContent: string;
 
-  public showUsers() {
-    this.showContent = "users";
-  }
 
-  public showPersonal() {
-    this.showContent = "personal";
-  }
 
-  public showFiles() {
-    this.showContent = "files";
-  }
+
+  public ShowContent = (content) => {
+    switch (content) {
+      case "personal":
+        return <chat-personal></chat-personal>;
+      case "users":
+        return <chat-users-wrapper  messages={messages} mainUser={mainUser} ></chat-users-wrapper>;
+      case "files":
+        return <chat-files-wrapper></chat-files-wrapper>;
+
+      default:
+        "files";
+    }
+  };
 
   render() {
     return (
@@ -42,26 +50,9 @@ export class ChatWrapper implements ComponentInterface {
           </a>
         </div>
 
-        <div class="content-chat">{this.ShowContent(this.showContent)}</div>
+        <div class="content-chat">{this.ShowContent(this.showContent )}</div>
       </div>
     );
   }
-  public ShowContent = (personal) => {
-    switch (personal) {
-      case "personal":
-        return <chat-personal></chat-personal>;
-      case "users":
-        return (
-          <chat-users-wrapper
-            messages={messages}
-            mainUser={mainUser}
-          ></chat-users-wrapper>
-        );
-      case "files":
-        return <chat-files-wrapper></chat-files-wrapper>;
 
-      default:
-        "files";
-    }
-  };
 }

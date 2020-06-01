@@ -43,6 +43,7 @@ export namespace Components {
     interface ChatWrapper {
         "mainUser": any;
         "messages": any;
+        "showContent": string;
     }
 }
 declare global {
@@ -152,28 +153,35 @@ declare namespace LocalJSX {
     }
     interface ChatApp {
         "onClose"?: (event: CustomEvent<any>) => void;
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
     }
     interface ChatFiles {
     }
     interface ChatFilesWrapper {
     }
     interface ChatFormSearch {
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
     }
     interface ChatFormSearchFiles {
-        "onFiles"?: (event: CustomEvent<any>) => void;
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
     }
     interface ChatMainUser {
         "mainUser"?: any;
     }
     interface ChatMainUserCard {
         "main"?: any;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
     }
     interface ChatPersonal {
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
     }
     interface ChatUser {
         "messages"?: any;
     }
     interface ChatUserCard {
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
         "user"?: any;
     }
     interface ChatUsers {
@@ -188,6 +196,10 @@ declare namespace LocalJSX {
         "mainUser"?: any;
         "messages"?: any;
         "onClose"?: (event: CustomEvent<any>) => void;
+        "onSelectFiles"?: (event: CustomEvent<any>) => void;
+        "onSelectPersonal"?: (event: CustomEvent<any>) => void;
+        "onSelectUsers"?: (event: CustomEvent<any>) => void;
+        "showContent"?: string;
     }
     interface IntrinsicElements {
         "chat-add-question": ChatAddQuestion;

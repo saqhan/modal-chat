@@ -1,12 +1,18 @@
-import { Component, ComponentInterface, h } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  h,
+  Event,
+  EventEmitter,
+} from "@stencil/core";
 
 @Component({
   tag: "chat-form-search",
   styleUrl: "chat-form-search.css",
   shadow: false,
 })
-
 export class ChatFormSearch implements ComponentInterface {
+  @Event() selectFiles: EventEmitter;
   render() {
     return (
       <div class="header-wrapper">
@@ -18,7 +24,7 @@ export class ChatFormSearch implements ComponentInterface {
               placeholder="Поиск чатов и сообщений"
             />
           </div>
-          <div class="block-file">
+          <div class="block-file" onClick={() => this.selectFiles.emit()} >
             <i class="far fa-file-alt"></i>
           </div>
         </div>

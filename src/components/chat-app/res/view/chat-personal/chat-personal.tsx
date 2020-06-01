@@ -1,4 +1,4 @@
-import { Component, ComponentInterface,  h } from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h} from '@stencil/core';
 
 @Component({
   tag: 'chat-personal',
@@ -6,13 +6,14 @@ import { Component, ComponentInterface,  h } from '@stencil/core';
   shadow: false,
 })
 export class ChatPersonal implements ComponentInterface {
-
+  @Event() selectUsers: EventEmitter;
   render() {
+
     return (
       <div class="personal-messages">
         <div class="col-12 chat-user-main">
           <div class="user">
-            <div class="btn-back">
+            <div class="btn-back" onClick={() => this.selectUsers.emit() }>
               <span><i class="fas fa-chevron-left"></i></span>
             </div>
             <div class="user-img">
