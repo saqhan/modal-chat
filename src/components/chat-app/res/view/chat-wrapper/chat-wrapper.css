@@ -41,6 +41,10 @@
     height: 100vh;
   }
 
+}
 
-
+@media (height: 1366px) and (width: 1024px ) {
+  .messages-block {
+    height: 72vh;
+  }
 }

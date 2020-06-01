@@ -25,3 +25,11 @@
     margin-left: 25px;
   }
 }
+
+
+
+@media (height: 1366px) and (width: 1024px ) {
+  .chat-wrap {
+    height: 72vh;
+  }
+}

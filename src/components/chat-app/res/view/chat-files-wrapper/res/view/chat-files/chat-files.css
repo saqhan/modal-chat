@@ -122,3 +122,9 @@
     padding: 10px 30px;
   }
 }
+@media (max-width: 320px) {
+
+  .wrapper-chat {
+    width: 320px;
+  }
+}

@@ -27,7 +27,8 @@ export class ChatUserCard implements ComponentInterface {
               <div class="user-mess">{this.user.message}</div>
               <div class="new-mess-wrap" ><span class="new-mess">1</span></div>
             </div>
-            <span class="positon-user">{this.user.position}</span>
+            { this.user.position ? <span class="positon-user">{this.user.position}</span> : '' }
+
           </div>
         </div>
 

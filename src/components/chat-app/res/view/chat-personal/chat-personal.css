@@ -113,10 +113,62 @@
   margin-right: 3px;
 }
 .messages-block {
-  height: 62vh;
+  height: 66vh;
 }
 
 .messages-block {
   overflow: scroll;
   overflow-x: hidden;
 }
+
+@media (max-width: 414px) {
+  .messages-block {
+    height: 74vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .messages-block {
+    height: 72vh;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper-chat {
+    width: 100%;
+    height: 100vh;
+  }
+  .messages-block {
+    height: 67vh;
+  }
+}
+
+@media (height: 1366px) and (width: 1024px ) {
+  .messages-block {
+    height: 72vh;
+  }
+}
+
+/*@media (max-height: 1024px) {*/
+/*  .messages-block {*/
+/*    height: 68vh;*/
+/*  }*/
+/*}*/
+
+
+/*@media (max-height: 812px) {*/
+/*  .messages-block {*/
+/*    height: 77vh;*/
+/*  }*/
+/*}*/
+/*@media (max-height: 667px) {*/
+/*  .messages-block {*/
+/*    height: 72vh;*/
+/*  }*/
+/*}*/
+
+/*@media (max-height: 568px) {*/
+/*  .messages-block {*/
+/*    height: 67vh;*/
+/*  }*/
+/*}*/
+

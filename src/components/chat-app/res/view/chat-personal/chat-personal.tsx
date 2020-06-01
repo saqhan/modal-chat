@@ -102,7 +102,42 @@ export class ChatPersonal implements ComponentInterface {
               <span class="mess-date">30.08.2020 09:20</span>
             </div>
           </div>
+          <div class="admin-mess">
+            <div class="mess-admin">
+              <div class="position-admin">
+                <span>Ксения, бизнес-ассистент</span>
+              </div>
+              <span class="admin-text"
+              >Спасибо! мы обязательно свяжемся и переведем сумму денег (нет)</span
+              >
+              <span class="mess-date">30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="personal-mess">
+            <div class="mess-user">
+              <span class="user-text">Well done!</span>
+              <span class="mess-date">30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="admin-mess">
+            <div class="mess-admin">
+              <div class="position-admin">
+                <span>Ксения, бизнес-ассистент</span>
+              </div>
+              <span class="admin-text"
+              >Спасибо! мы обязательно свяжемся и переведем сумму денег (нет)</span
+              >
+              <span class="mess-date">30.08.2020 09:20</span>
+            </div>
+          </div>
+          <div class="personal-mess">
+            <div class="mess-user">
+              <span class="user-text">Well done!</span>
+              <span class="mess-date">30.08.2020 09:20</span>
+            </div>
+          </div>
         </div>
+
         <chat-add-question></chat-add-question>
       </div>
     );

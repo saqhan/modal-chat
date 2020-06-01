@@ -1,5 +1,13 @@
-import {Component, ComponentInterface, h, State, Event, EventEmitter, Prop,} from "@stencil/core";
-import {mainUser, messages} from "../../../../../utils/mock";
+import {
+  Component,
+  ComponentInterface,
+  h,
+  State,
+  Event,
+  EventEmitter,
+  Prop,
+} from "@stencil/core";
+import { mainUser, messages } from "../../../../../utils/mock";
 
 @Component({
   tag: "chat-wrapper",
@@ -7,11 +15,10 @@ import {mainUser, messages} from "../../../../../utils/mock";
   shadow: false,
 })
 export class ChatWrapper implements ComponentInterface {
-  @State() showContent = 'users';
+  @State() showContent = "users";
   @Event() close: EventEmitter;
   @Prop() messages: any;
   @Prop() mainUser: any;
-
 
   public showUsers() {
     this.showContent = "users";
@@ -25,8 +32,6 @@ export class ChatWrapper implements ComponentInterface {
     this.showContent = "files";
   }
 
-
-
   render() {
     return (
       <div class="wrapper-chat">
@@ -38,16 +43,20 @@ export class ChatWrapper implements ComponentInterface {
         </div>
 
         <div class="content-chat">{this.ShowContent(this.showContent)}</div>
-
       </div>
     );
   }
   public ShowContent = (personal) => {
     switch (personal) {
       case "personal":
-        return <chat-personal ></chat-personal>;
+        return <chat-personal></chat-personal>;
       case "users":
-        return <chat-users-wrapper messages={messages} mainUser={mainUser} ></chat-users-wrapper>;
+        return (
+          <chat-users-wrapper
+            messages={messages}
+            mainUser={mainUser}
+          ></chat-users-wrapper>
+        );
       case "files":
         return <chat-files-wrapper></chat-files-wrapper>;
 
